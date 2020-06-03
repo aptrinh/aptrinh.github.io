@@ -198,6 +198,7 @@
 /* Article */
 
 .Article {
+  /*background-color: #f7ffba;*/
   margin: 1.5rem 0;
 }
 
@@ -230,6 +231,7 @@
 /* PageRoot (content body) */
 
 .PageRoot {
+  /*background-color: #f7ffba;*/
   padding-bottom: 0;
   padding-top: 0;
 }
