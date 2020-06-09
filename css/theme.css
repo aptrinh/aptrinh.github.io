@@ -54,6 +54,8 @@
 }
 
 body {
+  /*change background color here*/
+  background-color: rgb(253, 241, 221);
   color: var(--color-text-default);
   fill: currentColor;
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
