@@ -198,7 +198,6 @@
 /* Article */
 
 .Article {
-  /*background-color: #f7ffba;*/
   margin: 1.5rem 0;
 }
 
@@ -231,7 +230,6 @@
 /* PageRoot (content body) */
 
 .PageRoot {
-  /*background-color: #f7ffba;*/
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -276,7 +274,7 @@
 
 @supports (not (backdrop-filter: blur(20px))) and (not (-webkit-backdrop-filter: blur(20px))) {
   .Navbar {
-    /*change background color here*/
+    /*change background color here - aptrinh*/
     background-color: rgb(253, 241, 221);
   }
 }
