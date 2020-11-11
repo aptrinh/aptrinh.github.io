@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167219857-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-167219857-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Chrome, Firefox OS and Opera Status Bar Color -->
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:title" content="CJK Input Setup in Manjaro/Arch Linux with IBus">
+  
+  <meta name="description" content="The IBus version instead of fcitx/mozc">
+  <meta property="og:description" content="The IBus version instead of fcitx/mozc">
+  
+  <meta property="og:type" content="blog">
+  <title>CJK Input Setup in Manjaro/Arch Linux with IBus</title>
+  <!-- Favicon -->
+  
+  <link rel="shortcut icon" href="https://i.imgur.com/9hoyYBN.png">
+  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+  <link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+  <link rel="stylesheet" type="text/css" href="css/notablog.css">
+  <link rel="stylesheet" type="text/css" href="css/theme.css">
+  <style>
+    :root {
+      font-size: 18px;
+    }
+
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+    <a href="index.html">
+      <div class="Navbar__Btn"><span><img class="inline-img-icon" src="https://i.imgur.com/9hoyYBN.png"></span> <span>Home</span></div>
+    </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="daily-runs.html">
+      <div class="Navbar__Btn"><span>🏃🏻‍♂️</span> <span>Daily RL Runs</span></div>
+    </a>
+    
+    
+    
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="Atheneum.html">
+      <div class="Navbar__Btn"><span>📚</span> <span>Atheneum</span></div>
+    </a>
+    
+    
+    
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="projects.html">
+      <div class="Navbar__Btn"><span>🕹️</span> <span>Project(s)</span></div>
+    </a>
+    
+    
+    
+    <span class="Navbar__Delim">&centerdot;</span>
+    <a href="about.html">
+      <div class="Navbar__Btn"><span>⛵</span> <span>About</span></div>
+    </a>
+    
+    
+    
+    
+  </nav>
+  <header class="Header">
+      
+    <div class="Header__Cover">
+        <img src="https://images.unsplash.com/photo-1545968340-848cddd981ea?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjYzOTIxfQ">
+      </div>
+      
+    <div class="Header__Spacer ">
+    </div>
+    
+    <div class="Header__Icon"><span>⌨️</span></div>
+    
+    <h1 class="Header__Title">CJK Input Setup in Manjaro/Arch Linux with IBus</h1>
+        
+    <div class="DateTagBar">
+          
+      <span class="DateTagBar__Item DateTagBar__Date">Posted on Tue, Nov 10, 2020</span>
+          
+          
+      <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+            <a href="tag/Linux.html">Linux</a>
+          </span>
+          
+        </div>
+        
+  </header>
+      <article id="https://www.notion.so/b25275d37f4749318e05bafd634cb6bb" class="PageRoot"><div id="https://www.notion.so/2146734000b24f4d9e7e1b73ad384001" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">There are at least 2 ways of setting up a CJK environment if you want to type in these languages or more: IBus and fcitx. Today we&#x27;ll be using the former, but if you want to use the latter, head to Alex&#x27;s blog: </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://dragonman225.js.org/linux-fcitx.html">https://dragonman225.js.org/linux-fcitx.html</a></span></span></p></div><div id="https://www.notion.so/8197f17ef5424762ba4d8eaae3f6e39a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">CJK → Chinese, Japanese, Korean → </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">ibus-chewing</code></span><span class="SemanticString">, </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">ibus-anthy</code></span><span class="SemanticString">, </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">ibus-hangul</code></span><span class="SemanticString"> respectively</span></span></p></div><div id="https://www.notion.so/9d4c472883c34f28857e0bc8d0256558" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Bonus: Vietnamese → </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">ibus-unikey</code></span></span></p></div><h2 id="https://www.notion.so/7c75053ab0054f5f960075ccf5b6fe2c" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/7c75053ab0054f5f960075ccf5b6fe2c"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Installation</span></span></h2><div id="https://www.notion.so/cb1762237adc483daef8364820ed646f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">You probably need fonts first:</span></span></p></div><pre id="https://www.notion.so/b5f8a3ff4b614f4fa197a146376bd5d5" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span>sudo pacman -S \
+wqy-microhei wqy-microhei-lite \
+otf-ipafont \
+ttf-baekmuk</span></span></span></code></pre><div id="https://www.notion.so/b2ccc38b91124b8aa7adebecab833a6e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">After the above, we go for IBus and its method engines:</span></span></p></div><pre id="https://www.notion.so/041571681f824e6e9caeb3811d6f9395" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span>sudo pacman -S ibus ibus-chewing ibus-anthy ibus-hangul</span></span></span></code></pre><div id="https://www.notion.so/f6a12d709cd048bbae757fd855bda945" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Now put the following in either </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">~/.xprofile </code></span><span class="SemanticString">(create if it doesn&#x27;t exist) or </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">~/.xinitrc</code></span><span class="SemanticString">, as pointed out by </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://wiki.archlinux.org/index.php/IBus#Use_xinitrc_to_export">this ArchWiki article</a></span><span class="SemanticString">:</span></span></p></div><pre id="https://www.notion.so/710f7f92b1dc49aa920c32f3f332c4b6" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token builtin class-name">export</span> <span class="token assign-left variable">GTK_IM_MODULE</span><span class="token operator">=</span>ibus
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">XMODIFIERS</span></span><span class="token operator">=</span>@im<span class="token operator">=</span>ibus
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">QT_IM_MODULE</span><span class="token operator">=</span>ibus</span></span></span></code></pre><h2 id="https://www.notion.so/54786cea4caa42d8902e0433e97cae01" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/54786cea4caa42d8902e0433e97cae01"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Configure IBus</span></span></h2><div id="https://www.notion.so/299fa13c29e242188769ce53a718880e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Either do </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">ibus-setup</code></span><span class="SemanticString"> or click on IBus Preferences from the menu, then add your input methods:</span></span></p></div><div id="https://www.notion.so/98116ff5587a4f4e9b64a83001274be7" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5de19309-2c10-4db5-bb0f-3fdd8dc1a24d%2FUntitled.png?width=639&amp;table=block&amp;id=98116ff5-587a-4f4e-9b64-a83001274be7"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F5de19309-2c10-4db5-bb0f-3fdd8dc1a24d%2FUntitled.png?width=639&amp;table=block&amp;id=98116ff5-587a-4f4e-9b64-a83001274be7" style="width:639px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/8a582151bb454ba0b7589c3be5884e62" class="ColorfulBlock ColorfulBlock--BgGray Callout"><div class="Callout__Icon"><div class="Icon">💡</div></div><p class="Callout__Content"><span class="SemanticStringArray"><span class="SemanticString">Remember that you need to also head to each IM&#x27;s Preferences option if you want to change any setting modularly</span></span></p></div><div id="https://www.notion.so/7faa79f39fb04666ac2295e35b30483e" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F98c43523-6b8b-481e-8b7f-577093b192b2%2FUntitled.png?width=634&amp;table=block&amp;id=7faa79f3-9fb0-4666-ac22-95e35b30483e"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F98c43523-6b8b-481e-8b7f-577093b192b2%2FUntitled.png?width=634&amp;table=block&amp;id=7faa79f3-9fb0-4666-ac22-95e35b30483e" style="width:634px"/></a><figcaption><span class="SemanticStringArray"><span class="SemanticString">Check everything when in doubt - Indiana Jones</span></span></figcaption></figure></div><h2 id="https://www.notion.so/2c447ec10b8a4381a4376886e2ca2179" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/2c447ec10b8a4381a4376886e2ca2179"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Usage Guide:</span></span></h2><h3 id="https://www.notion.so/195229cdbe2c48ff80563bc72fc890b6" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/195229cdbe2c48ff80563bc72fc890b6"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Switching Input Methods:</span></span></h3><ul class="BulletedListWrapper"><li id="https://www.notion.so/e0f864f493bc44c8b8900a7522033ef0" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">Super (hold) + Space</code></span><span class="SemanticString">: Scrolling through IMs</span></span></li></ul><h3 id="https://www.notion.so/436d3864e17943ab9adb70c7e42934d5" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/436d3864e17943ab9adb70c7e42934d5"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Japanese:</span></span></h3><ul class="BulletedListWrapper"><li id="https://www.notion.so/4d21377b66d047f781877c28af66c495" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">Ctrl + J</code></span><span class="SemanticString"> to switch between Latin and Kana while in Japanese IM. I changed this into </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">Alt + `</code></span></span></li><li id="https://www.notion.so/d0298d8041dd43fbb506f47eb166b99f" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">Hiragana: Type the romaji version normally and press </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">Enter</code></span></span></li><li id="https://www.notion.so/4f91b12729cf496ebe6de1403bb86bb9" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">Katakana: Type the romaji version normally and press F7</span></span></li><li id="https://www.notion.so/ffc243ff0afd4297bb180dcbbe46c9a8" class="BulletedList"><span class="SemanticStringArray"><span class="SemanticString">Kanji: Prediction should be used here. Type the romaji version of each Kanji, then press </span><span class="SemanticString"><code class="SemanticString__Fragment SemanticString__Fragment--Code">Tab</code></span></span></li></ul><div id="https://www.notion.so/a7b373149a9d4048a1708dc93728a3d7" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/84f6ce2bc9124851ad138d6531c8adc3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">Have fun~ </span></span></p></div><div id="https://www.notion.so/7f1a141876544cb9842fe362c0a45f71" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">キョンくん電話！</span></span></p></div><div id="https://www.notion.so/8e6891f96fcc4a53bcc759860548bcfc" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">キョンくん電話！</span></span></p></div><div id="https://www.notion.so/15de0cf237284615a8cddaaae7db8d9c" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">キョンくん電話！</span></span></p></div><div id="https://www.notion.so/aedfb8a390044a259c02de936a4574fb" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">キョンくん電話！</span></span></p></div><div id="https://www.notion.so/9d9052b400e747ae9813915a3e21e3ad" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+  <footer class="Footer">
+        <div>&copy; Bloglike 2020</div>
+        <div>&centerdot;</div>
+        <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+            rel="noopener noreferrer">Notablog</a>.
+        </div>
+    </footer>
+</body>
+
+</html>
