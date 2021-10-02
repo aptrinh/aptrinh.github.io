@@ -5,12 +5,12 @@
 }
 
 *::selection {
-  background: rgba(45, 170, 219, 0.3);
+  background: rgba(206, 143, 149, 0.79); /*Selection more transparent, change to pink-ish*/
 }
 
 :root {
   --color-text-default: rgb(55, 53, 47);
-  --color-text-default-light: rgba(55, 53, 47, 0.6);
+  /* --color-text-default-light: rgba(55, 53, 47, 0.6); Increases contrasts - aptrinh */
   --color-text-gray: rgb(155, 154, 151);
   --color-text-brown: rgb(100, 71, 58);
   --color-text-orange: rgb(217, 115, 13);
@@ -54,8 +54,6 @@
 }
 
 body {
-  /*Change background color here - aptrinh*/
-  background-color: rgb(253, 241, 221);
   color: var(--color-text-default);
   fill: currentColor;
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont',
@@ -176,15 +174,16 @@ p {
 
 pre.Code {
   border-radius: 5px;
-  background-color: rgb(247, 246, 243);
+  background-color: rgb(77,74,67); /* Invert code block color - aptrinh  */
   margin: 10px 0;
   padding: 26px 16px;
   overflow: auto;
 }
 
 pre.Code code {
-  background-color: rgb(247, 246, 243);
-  color: rgb(55, 53, 47);
+  /* Invert code block color - aptrinh  */
+  background-color: rgb(77,74,67);
+  color: rgb(247, 246, 243);
   font-size: 0.9em;
   line-height: 1.4;
   padding: 0;
@@ -878,7 +877,7 @@ pre.Code code {
 .SemanticString__Fragment--Code {
   border-radius: 5px;
   background-color: rgba(135, 131, 120, 0.15);
-  color: #ff4081;
+  color: #c81134; /*Make it a little redder to avoid contrast*/
   font-size: 0.9em;
   padding: 0.2em 0.4em;
   word-break: break-word;
