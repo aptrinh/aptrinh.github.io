@@ -1,3 +1,8 @@
+:root {
+  --bg: rgb(250, 250, 246);
+  --bg-blur: rgba(250, 250, 246, 0.4);
+}
+
 body {
   /*change background color here - aptrinh*/
   background: rgb(253, 241, 221);
